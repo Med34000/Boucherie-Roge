@@ -43,16 +43,17 @@
     border-bottom-color: var(--primary-red);
 }
 
-.imagePlaceholder {
+.imageWrapper {
     width: 100%;
-    height: 400px;
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
+    height: auto;
+}
+
+.roundedImage {
+    width: 100%;
+    height: auto;
     border-radius: var(--radius-md);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 
 .centered {

@@ -1,6 +1,4 @@
-import Link from "next/link";
-import Hero from "@/components/Hero";
-import styles from "./page.module.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -30,9 +28,14 @@ export default function Home() {
               </Link>
             </div>
             <div className={styles.imageColumn}>
-              {/* Fallback box mimicking an image if not available */}
-              <div className={styles.imagePlaceholder}>
-                <span>L&apos;Art de la Découpe</span>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src="/images/home-cut.png"
+                  alt="Découpe artisanale de viande"
+                  width={600}
+                  height={400}
+                  className={styles.roundedImage}
+                />
               </div>
             </div>
           </div>
