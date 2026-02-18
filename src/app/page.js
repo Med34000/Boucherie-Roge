@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import Hero from "@/components/Hero";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
