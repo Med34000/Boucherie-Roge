@@ -1,0 +1,105 @@
+.section {
+    padding: 5rem 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contentBlock {
+    margin-bottom: 5rem;
+}
+
+.contentBlock h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-red);
+    padding-left: 1rem;
+}
+
+.contentBlock p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.duoBlock {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.imageWrapper {
+    flex: 1;
+}
+
+.roundedImage {
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.textContent {
+    flex: 1;
+}
+
+.textContent h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-red);
+}
+
+.philosophySection {
+    background-color: var(--secondary-slate);
+    color: white;
+    padding: 5rem 0;
+}
+
+.philosophySection h2 {
+    text-align: center;
+    color: var(--accent-gold);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+    color: white;
+    /* Force white for title inside dark section */
+    margin-bottom: 1rem;
+    font-family: var(--font-inter);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .duoBlock {
+        flex-direction: column;
+    }
+}

@@ -1,66 +1,66 @@
-import Image from "next/image";
+import Link from "next/link";
+import Hero from "@/components/Hero";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Hero
+        title="Boucherie Rogé"
+        subtitle="Artisan Boucher à Paulhan depuis 45 ans"
+        image="/images/hero-bg.png"
+        ctaLink="/contact"
+        ctaText="Nous Trouver"
+      />
+
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.grid}>
+            <div className={styles.textColumn}>
+              <h2>La Passion du Goût</h2>
+              <p>
+                Depuis plus de quatre décennies, Thierry Rogé met son savoir-faire d&apos;artisan boucher au service de la qualité.
+                Installés rue du Fenouil à Paulhan, nous sélectionnons pour vous les meilleures viandes et charcuteries.
+              </p>
+              <p>
+                Notre philosophie est simple : proposer des produits locaux, savoureux et préparés dans le respect de la tradition bouchère.
+              </p>
+              <Link href="/a-propos" className={styles.link}>
+                En savoir plus sur notre histoire &rarr;
+              </Link>
+            </div>
+            <div className={styles.imageColumn}>
+              {/* Fallback box mimicking an image if not available */}
+              <div className={styles.imagePlaceholder}>
+                <span>L&apos;Art de la Découpe</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className={`${styles.section} ${styles.bgAlt}`}>
+        <div className={styles.container}>
+          <div className={styles.centered}>
+            <h2>Nos Spécialités</h2>
+            <p>Découvrez une sélection rigoureuse de viandes locales et de produits faits maison.</p>
+          </div>
+          <div className={styles.featuresGrid}>
+            <div className={styles.feature}>
+              <h3>Viandes de Terroir</h3>
+              <p>Bœuf, Veau, Agneau et Porc sélectionnés auprès d&apos;éleveurs locaux.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>Charcuterie Maison</h3>
+              <p>Saucisses, pâtés et terrines préparés dans notre atelier.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>Traiteur</h3>
+              <p>Des plats cuisinés chaque jour pour vous régaler.</p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
