@@ -84,9 +84,32 @@
     font-weight: 600;
 }
 
+.imageCard {
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: center;
+}
+
+.boucherImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.imageCaption {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: var(--primary-red);
+    font-weight: 600;
+    font-style: italic;
+}
+
 .mapContainer {
-    height: 100%;
-    min-height: 500px;
+    grid-column: 1 / -1;
+    min-height: 400px;
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -95,7 +118,7 @@
 .mapFrame {
     width: 100%;
     height: 100%;
-    min-height: 500px;
+    min-height: 400px;
 }
 
 @media (max-width: 768px) {
@@ -104,6 +127,10 @@
     }
 
     .mapContainer {
+        min-height: 300px;
+    }
+
+    .mapFrame {
         min-height: 300px;
     }
 }

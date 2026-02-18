@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import styles from "./page.module.css";
 
@@ -52,6 +53,17 @@ export default function Contact() {
                                     <li><span>Dimanche</span> <span>7h30 - 12h30</span></li>
                                 </ul>
                             </div>
+                        </div>
+
+                        <div className={styles.imageCard}>
+                            <Image
+                                src="/images/boucher-caricature.jpeg"
+                                alt="Votre boucher - Boucherie Rogé"
+                                width={500}
+                                height={625}
+                                className={styles.boucherImage}
+                            />
+                            <p className={styles.imageCaption}>Votre artisan boucher vous accueille avec le sourire !</p>
                         </div>
 
                         <div className={styles.mapContainer}>
